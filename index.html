@@ -1,0 +1,329 @@
+<html>
+<head>
+    <!-- sprite and css courtesy of http://designfestival.com/playing-with-fire-organic-css3-animation/ -->
+    <style type="text/css">
+        body {
+            background-color: #000;
+            padding-top: 50%;
+        }
+
+        #free-speech {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -5em;
+            margin-top: -5em;
+        }
+
+        #flamegroup {
+            margin: 0 auto;
+        }
+
+        .pulse {
+            animation: pulse .4s infinite;
+            -webkit-animation: pulse .4s infinite;
+        }
+
+        .flame {
+            margin: 0 auto;
+            position: absolute;
+            top: 4em;
+            width: 100px;
+            height: 136px;
+            background: url(assets/img/flame-sprite.png) 0px 0px no-repeat;
+            -webkit-transform: scale(2);
+            -moz-transform: scale(2);
+            transform: scale(2);
+        }
+
+        h1, p {
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .error-code {
+            display: block;
+            font-size: 6em;
+        }
+
+        .flame-pos-0 {
+            left: .5em;
+        }
+
+        .flame-pos-1 {
+            left: 7.5em;
+        }
+
+        .flame-pos-2 {
+            left: 14em;
+        }
+
+        .flicker {
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+
+        .flicker-pattern-1 {
+            -webkit-animation-name: flicker-1;
+            animation-name: flicker-1;
+        }
+        .flicker-pattern-2 {
+            -webkit-animation-name: flicker-2;
+            animation-name: flicker-3;
+        }
+        .flicker-pattern-3 {
+            -webkit-animation-name: flicker-3;
+            animation-name: flicker-3;
+        }
+
+        .flicker-speed-3 {
+            -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+        }
+        .flicker-speed-4 {
+            -webkit-animation-duration: .4s;
+            animation-duration: .4s;
+        }
+
+        .flicker-speed-7 {
+            -webkit-animation-duration: .7s;
+            animation-duration: .7s;
+        }
+
+        @keyframes flicker-1 {
+            /* flame pulses */
+            0% {
+                background-position: 0px 0px;
+                opacity: .8
+            }
+            25% {
+                background-position: 0px 0px;
+            }
+            25.1% {
+                background-position: -100px 0px;
+            }
+            50% {
+                background-position: -100px 0px;
+                opacity: .4
+            }
+            50.1% {
+                background-position: -200px 0px;
+            }
+            75% {
+                background-position: -200px 0px;
+
+            }
+            75.1% {
+                background-position: -100px 0px;
+            }
+            100% {
+                background-position: -100px 0px;
+                opacity: .8
+            }
+        }
+
+        @-webkit-keyframes flicker-1 {
+            /* flame pulses */
+            0% {
+                background-position: 0px 0px;
+                opacity: .8
+            }
+            25% {
+                background-position: 0px 0px;
+            }
+            25.1% {
+                background-position: -100px 0px;
+            }
+            50% {
+                background-position: -100px 0px;
+                opacity: .4
+            }
+            50.1% {
+                background-position: -200px 0px;
+            }
+            75% {
+                background-position: -200px 0px;
+
+            }
+            75.1% {
+                background-position: -100px 0px;
+            }
+            100% {
+                background-position: -100px 0px;
+                opacity: .8
+            }
+        }
+
+        @keyframes flicker-2 {
+            /* flame pulses */
+            0% {
+                background-position: 0px 0px;
+                opacity: .8
+            }
+            25% {
+                background-position: 0px 0px;
+            }
+            25.1% {
+                background-position: -100px 0px;
+            }
+            50% {
+                background-position: -100px 0px;
+                opacity: .4
+            }
+            50.1% {
+                background-position: -200px 0px;
+            }
+            75% {
+                background-position: -200px 0px;
+
+            }
+            75.1% {
+                background-position: -100px 0px;
+            }
+            100% {
+                background-position: -100px 0px;
+                opacity: .8
+            }
+        }
+
+        @-webkit-keyframes flicker-2 {
+            /* flame pulses */
+            0% {
+                background-position: 0px 0px;
+                opacity: .8
+            }
+            25% {
+                background-position: 0px 0px;
+            }
+            25.1% {
+                background-position: -100px 0px;
+            }
+            50% {
+                background-position: -100px 0px;
+                opacity: .4
+            }
+            50.1% {
+                background-position: -200px 0px;
+            }
+            75% {
+                background-position: -200px 0px;
+
+            }
+            75.1% {
+                background-position: -100px 0px;
+            }
+            100% {
+                background-position: -100px 0px;
+                opacity: .8
+            }
+        }
+        @keyframes flicker-3 {
+            /* flame pulses */
+            0% {
+                background-position: 0px 0px;
+                opacity: .8
+            }
+            25% {
+                background-position: 0px 0px;
+            }
+            25.1% {
+                background-position: -100px 0px;
+            }
+            50% {
+                background-position: -100px 0px;
+                opacity: .4
+            }
+            50.1% {
+                background-position: -200px 0px;
+            }
+            75% {
+                background-position: -200px 0px;
+
+            }
+            75.1% {
+                background-position: -100px 0px;
+            }
+            100% {
+                background-position: -100px 0px;
+                opacity: .8
+            }
+        }
+
+        @-webkit-keyframes flicker-3 {
+            /* flame pulses */
+            0% {
+                background-position: 0px 0px;
+                opacity: .8
+            }
+            25% {
+                background-position: 0px 0px;
+            }
+            25.1% {
+                background-position: -100px 0px;
+            }
+            50% {
+                background-position: -100px 0px;
+                opacity: .4
+            }
+            50.1% {
+                background-position: -200px 0px;
+            }
+            75% {
+                background-position: -200px 0px;
+
+            }
+            75.1% {
+                background-position: -100px 0px;
+            }
+            100% {
+                background-position: -100px 0px;
+                opacity: .8
+            }
+        }
+
+        @keyframes pulse {
+            /* text pulses */
+            0% {
+                opacity: .8
+            }
+            50% {
+                opacity: .4
+            }
+            100% {
+                opacity: .8
+            }
+        }
+
+        @-webkit-keyframes pulse {
+            /* text pulses */
+            0% {
+                opacity: .9
+            }
+            50% {
+                opacity: .7
+            }
+            100% {
+                opacity: .9
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="free-speech">
+        <div id="flamegroup">
+            <h1>Error Code <span class="error-code pulse">451</span></h1>
+            <p>Unavailable For Legal Reasons</p>
+            <div class="flame flicker flicker-pattern-1 flicker-speed-3 flame-pos-1"></div>
+            <div class="flame flicker flicker-pattern-1 flicker-speed-4 flame-pos-1"></div>
+            <div class="flame flicker flicker-pattern-1 flicker-speed-7 flame-pos-1"></div>
+            <div class="flame flicker flicker-pattern-2 flicker-speed-3 flame-pos-2"></div>
+            <div class="flame flicker flicker-pattern-2 flicker-speed-4 flame-pos-2"></div>
+            <div class="flame flicker flicker-pattern-2 flicker-speed-7 flame-pos-2"></div>
+            <div class="flame flicker flicker-pattern-3 flicker-speed-3 flame-pos-3"></div>
+            <div class="flame flicker flicker-pattern-3 flicker-speed-4 flame-pos-3"></div>
+            <div class="flame flicker flicker-pattern-3 flicker-speed-7 flame-pos-3"></div>
+        </div>
+    </div>
+</body>
+</html>
